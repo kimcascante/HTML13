@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periódico Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <header class="bg-teal-400 shadow-md">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="#" class="-m-1.5 p-1.5">
+        <span class="sr-only">Nombre del Periódico</span>
+        <img class="h-8 w-auto" src="Files/2965879.png" alt="Logo del periódico">
+      </a>
+    </div>
+    
+    <div class="flex lg:hidden">
+      <button type="button" id="menuPrincipal" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <span class="sr-only">Abrir menú principal</span>
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a href="#" class="text-lg font-semibold text-gray-900">Noticias</a>
+      <a href="#" class="text-lg font-semibold text-gray-900">Opinión</a>
+      <a href="#" class="text-lg font-semibold text-gray-900">Deportes</a>
+      <a href="#" class="text-lg font-semibold text-gray-900">Economía</a>
+      <a href="#" class="text-lg font-semibold text-gray-900">Cultura</a>
+    </div>
+
+    <div id="menuMovil" class="hidden absolute top-16 left-0 w-full bg-white shadow-lg lg:hidden">
+      <div class="px-4 py-2 space-y-1">
+        <a href="#" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Noticias</a>
+        <a href="#" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Opinión</a>
+        <a href="#" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Deportes</a>
+        <a href="#" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Economía</a>
+        <a href="#" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Cultura</a>
+        <div class="border-t border-gray-200 pt-2">
+          <a href="#" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Suscríbete</a>
+          <a href="#" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Iniciar sesión</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+</header>
+
+<main class="container mx-auto p-4">
+    <div class="flex flex-col lg:flex-row">
+        <aside class="w-full lg:w-1/4 mb-6 lg:mb-0">
+            <div class="bg-white p-4 rounded shadow-lg">
+                <h3 class="text-lg font-semibold mb-4">Categorías</h3>
+                <div class="block lg:block">
+                    <div class="space-y-4">
+                        <div>
+                            <ul class="space-y-2 mt-2">
+                                <li><button class="text-sm text-gray-600 hover:text-gray-900">Internacional</button></li>
+                                <li><button class="text-sm text-gray-600 hover:text-gray-900">Deportes</button></li>
+                                <li><button class="text-sm text-gray-600 hover:text-gray-900">Tecnología</button></li>
+                                <li><button class="text-sm text-gray-600 hover:text-gray-900">Cultura</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <section id="noticias" class="w-full lg:w-3/4 px-2 lg:px-8">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-3xl font-bold">Noticias de Última Hora</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+                <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition">
+                    <img src="/tarea4/Files/gobierno-1-e1586004529165.jpg" alt="Imagen de sala de gobierno" class="w-full h-48 sm:h-64 object-cover rounded mb-4">
+                    <h3 class="text-xl font-semibold">Escándalo en el Gobierno: Filtraciones revelan esquema de corrupción en obras públicas</h3>
+                    <p class="mt-2 text-gray-600">Una serie de filtraciones de documentos oficiales ha destapado un esquema de corrupción dentro de la Secretaría de Obras Públicas, donde altos funcionarios habrían desviado fondos destinados a proyectos de infraestructura.</p>
+                    <button class="mt-4 text-sm text-blue-500 hover:underline">Leer más</button>
+                </article>
+
+                <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition">
+                    <img src="/tarea4/Files/file-20240704-19-ipwqaj.avif" alt="Imagen de un lazo rosado representando el cancer" class="w-full h-48 sm:h-64 object-cover rounded mb-4">
+                    <h3 class="text-xl font-semibold">Científicos desarrollan vacuna experimental contra el cáncer: Primera fase de pruebas muestra resultados prometedores</h3>
+                    <p class="mt-2 text-gray-600">Un equipo de científicos del Instituto de Investigación de Cáncer de Boston ha desarrollado una vacuna experimental que muestra resultados prometedores en la lucha contra diversos tipos de cáncer.</p>
+                    <button class="mt-4 text-sm text-blue-500 hover:underline">Leer más</button>
+                </article>
+
+                <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition">
+                    <img src="/tarea4/Files/Apple-iPhone-15-lineup-color-lineup-geo-230912_big.jpg.large.jpg" alt="Imagenes de varios iPhone 15 en diferentes colores" class="w-full h-48 sm:h-64 object-cover rounded mb-4">
+                    <h3 class="text-xl font-semibold">Apple lanza su nuevo iPhone 15: Características innovadoras y diseño futurista</h3>
+                    <p class="mt-2 text-gray-600">Apple ha presentado su esperado iPhone 15 en un evento en su sede en Cupertino. El nuevo dispositivo destaca por su pantalla OLED de 6.7 pulgadas, una cámara de 108 megapíxeles y el chip A18, que promete una velocidad de procesamiento sin precedentes.</p>
+                    <button class="mt-4 text-sm text-blue-500 hover:underline">Leer más</button>
+                </article>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer class="bg-teal-800 text-white py-8 lg:py-12">
+    <div class="container mx-auto px-4 lg:px-12 text-center">
+      
+      <div>
+        <a href="#" class="text-teal-400 mx-2 hover:text-yellow-500">
+          <i class="fab fa-facebook-f"></i> 
+        </a>
+        <a href="#" class="text-teal-400 mx-2 hover:text-yellow-500">
+          <i class="fab fa-twitter"></i> 
+        </a>
+        <a href="#" class="text-teal-400 mx-2 hover:text-yellow-500">
+          <i class="fab fa-instagram"></i> 
+        </a>
+        <a href="#" class="text-teal-400 mx-2 hover:text-yellow-500">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+  
+      <div class="">
+        <p class="text-gray-400">&copy; 2024 Mi Periódico Digital. Todos los derechos reservados. Realizado por Kimberly Cascante Mora</p>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('menuPrincipal').addEventListener('click', function() {
+    const menuMovil = document.getElementById('menuMovil');
+    if (menuMovil.classList.contains('hidden')) {
+      menuMovil.classList.remove('hidden');
+    } else {
+      menuMovil.classList.add('hidden');
+    }
+  });
+</script>
+</body>
+</html>
